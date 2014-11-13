@@ -36,6 +36,9 @@
                                     <constraint firstItem="Mif-eL-hdh" firstAttribute="top" secondItem="QLX-0S-S7g" secondAttribute="top" constant="100" id="oE5-bN-tvF"/>
                                     <constraint firstAttribute="centerX" secondItem="Mif-eL-hdh" secondAttribute="centerX" id="wXj-jg-egQ"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="textView" destination="Mif-eL-hdh" id="QFY-lO-bSr"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

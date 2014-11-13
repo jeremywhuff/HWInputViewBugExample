@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainView: UIView {
+class MainView: UIView, KeyboardViewControllerDelegate {
     
     var singleTapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
     
@@ -21,6 +21,8 @@ class MainView: UIView {
         }
     }
     var inputViewUnderlying: UIView!
+    
+    @IBOutlet var textView: UITextView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,14 +37,18 @@ class MainView: UIView {
     }
     
     func singleTapRecognized() {
-        let screenSize: CGSize = UIScreen.mainScreen().bounds.size
-        let customInputView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 0.3 * screenSize.height))
-        customInputView.backgroundColor = UIColor.redColor()
-        inputView = customInputView
+        
+        let keyboardViewController: KeyboardViewController = KeyboardViewController(nibName: "KeyboardView", bundle: NSBundle.mainBundle())
+        keyboardViewController.delegate = self
+        inputView = keyboardViewController.view
         becomeFirstResponder()
     }
     
     override func canBecomeFirstResponder() -> Bool {
         return true
+    }
+    
+    func buttonPushed() {
+        textView?.becomeFirstResponder()
     }
 }
