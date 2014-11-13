@@ -19,7 +19,23 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLX-0S-S7g" customClass="MainView" customModule="HWInputViewBugExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text View Right Here!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mif-eL-hdh">
+                                        <rect key="frame" x="93" y="100" width="414" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="FBA-7z-00P"/>
+                                            <constraint firstAttribute="height" constant="50" id="nUY-D0-DbI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Mif-eL-hdh" firstAttribute="top" secondItem="QLX-0S-S7g" secondAttribute="top" constant="100" id="oE5-bN-tvF"/>
+                                    <constraint firstAttribute="centerX" secondItem="Mif-eL-hdh" secondAttribute="centerX" id="wXj-jg-egQ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

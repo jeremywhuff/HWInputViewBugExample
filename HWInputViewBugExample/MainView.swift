@@ -12,6 +12,16 @@ class MainView: UIView {
     
     var singleTapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
     
+    override var inputView: UIView! {
+        get {
+            return inputViewUnderlying
+        }
+        set(inputView) {
+            inputViewUnderlying = inputView
+        }
+    }
+    var inputViewUnderlying: UIView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         singleTapRecognizer = UITapGestureRecognizer(target: self, action: Selector("singleTapRecognized"))
@@ -25,6 +35,14 @@ class MainView: UIView {
     }
     
     func singleTapRecognized() {
-        println("Tap recognized")
+        let screenSize: CGSize = UIScreen.mainScreen().bounds.size
+        let customInputView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 0.3 * screenSize.height))
+        customInputView.backgroundColor = UIColor.redColor()
+        inputView = customInputView
+        becomeFirstResponder()
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
     }
 }

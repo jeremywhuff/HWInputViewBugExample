@@ -81,11 +81,11 @@
 			children = (
 				FB9094501A151DD7001F657B /* AppDelegate.swift */,
 				FB9094521A151DD7001F657B /* ViewController.swift */,
+				FB9094701A151E07001F657B /* MainView.swift */,
 				FB9094541A151DD7001F657B /* Main.storyboard */,
 				FB9094571A151DD7001F657B /* Images.xcassets */,
 				FB9094591A151DD7001F657B /* LaunchScreen.xib */,
 				FB90944E1A151DD7001F657B /* Supporting Files */,
-				FB9094701A151E07001F657B /* MainView.swift */,
 			);
 			path = HWInputViewBugExample;
 			sourceTree = "<group>";
