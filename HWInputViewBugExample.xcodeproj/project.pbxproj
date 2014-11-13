@@ -13,6 +13,7 @@
 		FB9094581A151DD7001F657B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9094571A151DD7001F657B /* Images.xcassets */; };
 		FB90945B1A151DD7001F657B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9094591A151DD7001F657B /* LaunchScreen.xib */; };
 		FB9094671A151DD7001F657B /* HWInputViewBugExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9094661A151DD7001F657B /* HWInputViewBugExampleTests.swift */; };
+		FB9094711A151E07001F657B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9094701A151E07001F657B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FB9094601A151DD7001F657B /* HWInputViewBugExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HWInputViewBugExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9094651A151DD7001F657B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB9094661A151DD7001F657B /* HWInputViewBugExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWInputViewBugExampleTests.swift; sourceTree = "<group>"; };
+		FB9094701A151E07001F657B /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				FB9094571A151DD7001F657B /* Images.xcassets */,
 				FB9094591A151DD7001F657B /* LaunchScreen.xib */,
 				FB90944E1A151DD7001F657B /* Supporting Files */,
+				FB9094701A151E07001F657B /* MainView.swift */,
 			);
 			path = HWInputViewBugExample;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9094531A151DD7001F657B /* ViewController.swift in Sources */,
+				FB9094711A151E07001F657B /* MainView.swift in Sources */,
 				FB9094511A151DD7001F657B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
