@@ -14,6 +14,7 @@ protocol KeyboardViewControllerDelegate {
 
 class KeyboardViewController: UIViewController {
     
+    @IBOutlet var showAlphaKeyboardButton: UIButton!
     var delegate: KeyboardViewControllerDelegate? = nil
     
     @IBAction func showAlphaKeyboardPushed(sender: AnyObject) {

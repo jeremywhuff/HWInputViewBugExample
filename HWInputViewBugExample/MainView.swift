@@ -25,6 +25,8 @@ class MainView: UIView, KeyboardViewControllerDelegate {
     @IBOutlet var textView: UITextView?
     @IBOutlet var fixitSwitch: UISwitch?
     
+    var keyboardViewController: KeyboardViewController? = nil
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         singleTapRecognizer = UITapGestureRecognizer(target: self, action: Selector("singleTapRecognized"))
@@ -39,9 +41,9 @@ class MainView: UIView, KeyboardViewControllerDelegate {
     
     func singleTapRecognized() {
         
-        let keyboardViewController: KeyboardViewController = KeyboardViewController(nibName: "KeyboardView", bundle: NSBundle.mainBundle())
-        keyboardViewController.delegate = self
-        inputView = keyboardViewController.view
+        keyboardViewController = KeyboardViewController(nibName: "KeyboardView", bundle: NSBundle.mainBundle())
+        keyboardViewController!.delegate = self
+        inputView = keyboardViewController!.view
         becomeFirstResponder()
     }
     
