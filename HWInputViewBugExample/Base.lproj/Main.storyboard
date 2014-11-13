@@ -30,10 +30,31 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpi-t7-OLv">
+                                        <rect key="frame" x="100" y="180" width="400" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="FJ2-Gl-g8r"/>
+                                            <constraint firstAttribute="height" constant="300" id="G5L-Ba-Vv5"/>
+                                        </constraints>
+                                        <string key="text">Steps to Reproduce:
+
+1) Tap in the green region
+2) When the custom red keyboard appears, tap “Show Alpha Keyboard”
+3) Tap in the green region again. The red keyboard will reappear
+4) Click the home button to go to the home screen
+5) Tap the app icon to bring the app back to the foreground
+
+POOF! Your custom keyboard is gone and you can’t get it back. Unless you tap the text view again.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="dpi-t7-OLv" firstAttribute="top" secondItem="Mif-eL-hdh" secondAttribute="bottom" constant="30" id="ksU-Js-Ov9"/>
                                     <constraint firstItem="Mif-eL-hdh" firstAttribute="top" secondItem="QLX-0S-S7g" secondAttribute="top" constant="100" id="oE5-bN-tvF"/>
+                                    <constraint firstAttribute="centerX" secondItem="dpi-t7-OLv" secondAttribute="centerX" id="tot-Ei-mmx"/>
                                     <constraint firstAttribute="centerX" secondItem="Mif-eL-hdh" secondAttribute="centerX" id="wXj-jg-egQ"/>
                                 </constraints>
                                 <connections>
