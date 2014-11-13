@@ -35,6 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        if let mainView: MainView = window?.rootViewController?.view.subviews[0] as? MainView {
+            
+            if mainView.fixitSwitch!.on {
+                if mainView.textView != nil {
+                    mainView.textView!.becomeFirstResponder()
+                    NSTimer.scheduledTimerWithTimeInterval(0.05, target: mainView.textView!, selector: "resignFirstResponder", userInfo: nil, repeats: false)
+                }
+            }
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {

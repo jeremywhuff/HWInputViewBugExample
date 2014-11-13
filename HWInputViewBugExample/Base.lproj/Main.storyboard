@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -49,15 +50,37 @@ POOF! Your custom keyboard is gone and you can’t get it back. Unless you tap t
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="teB-Fr-2oc">
+                                        <rect key="frame" x="100" y="515" width="51" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="o9w-p3-rh8"/>
+                                            <constraint firstAttribute="width" constant="49" id="wsr-v3-bwM"/>
+                                        </constraints>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hack Fix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED0-V0-gqb">
+                                        <rect key="frame" x="169" y="520" width="67" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="8CP-bt-0ve"/>
+                                            <constraint firstAttribute="width" constant="67" id="NgA-OH-ccQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="teB-Fr-2oc" firstAttribute="top" secondItem="dpi-t7-OLv" secondAttribute="bottom" constant="35" id="XIn-7C-Nyh"/>
+                                    <constraint firstItem="ED0-V0-gqb" firstAttribute="leading" secondItem="teB-Fr-2oc" secondAttribute="trailing" constant="20" id="aJT-6C-QU9"/>
+                                    <constraint firstItem="teB-Fr-2oc" firstAttribute="centerY" secondItem="ED0-V0-gqb" secondAttribute="centerY" id="hrq-o8-XjO"/>
                                     <constraint firstItem="dpi-t7-OLv" firstAttribute="top" secondItem="Mif-eL-hdh" secondAttribute="bottom" constant="30" id="ksU-Js-Ov9"/>
                                     <constraint firstItem="Mif-eL-hdh" firstAttribute="top" secondItem="QLX-0S-S7g" secondAttribute="top" constant="100" id="oE5-bN-tvF"/>
+                                    <constraint firstItem="teB-Fr-2oc" firstAttribute="leading" secondItem="dpi-t7-OLv" secondAttribute="leading" id="ova-HQ-gpu"/>
                                     <constraint firstAttribute="centerX" secondItem="dpi-t7-OLv" secondAttribute="centerX" id="tot-Ei-mmx"/>
                                     <constraint firstAttribute="centerX" secondItem="Mif-eL-hdh" secondAttribute="centerX" id="wXj-jg-egQ"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="fixitSwitch" destination="teB-Fr-2oc" id="m6M-It-vCG"/>
                                     <outlet property="textView" destination="Mif-eL-hdh" id="QFY-lO-bSr"/>
                                 </connections>
                             </view>

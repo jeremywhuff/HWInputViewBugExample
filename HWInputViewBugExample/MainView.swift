@@ -23,6 +23,7 @@ class MainView: UIView, KeyboardViewControllerDelegate {
     var inputViewUnderlying: UIView!
     
     @IBOutlet var textView: UITextView?
+    @IBOutlet var fixitSwitch: UISwitch?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
